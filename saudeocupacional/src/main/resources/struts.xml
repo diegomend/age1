@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+   "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+   "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <constant name = "struts.devMode" value = "true" />
+   
+   <package name = "saudeocupacional" extends = "struts-default">
+     <action name = "listarExames" 
+       class = "com.age.saudeocupacional.ListarExamesAction" 
+       method = "execute">
+       <result name = "success">/index.jsp</result>
+     </action>
+     <action name = "solicitarExame" 
+       class = "com.age.saudeocupacional.SolicitarExameAction" 
+       method = "execute">
+       <result name = "input">/solicitarExame.jsp</result>
+       <result name = "success">/solicitarExame.jsp</result>
+     </action>
+     <action name = "inserirExame" 
+       class = "com.age.saudeocupacional.SolicitarExameAction" 
+       method = "inserir">
+       <result name = "success">/index.jsp</result>
+     </action>
+     <action name = "alterarExame" 
+       class = "com.age.saudeocupacional.SolicitarExameAction" 
+       method = "alterar">
+       <result name = "success">/index.jsp</result>
+     </action>
+   </package>
+</struts>
